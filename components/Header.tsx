@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 interface HeaderProps {
   className?: string;
@@ -46,6 +47,7 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
                 </Link>
               </li>
             ))}
+            <LanguageSwitcher />
           </ul>
         </nav>
         <div
