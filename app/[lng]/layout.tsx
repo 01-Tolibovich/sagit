@@ -4,7 +4,6 @@ import { Raleway } from "next/font/google";
 import "../globals.css";
 import { MainInfo } from "@/components/MainInfo";
 import { Header } from "@/components/header/Header";
-import { PageLanguageParams } from "@/shared/types";
 
 const raleway = Raleway({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -22,7 +21,7 @@ export default function RootLayout({
   params: { lng },
 }: Readonly<{
   children: React.ReactNode;
-  params: PageLanguageParams["params"];
+  params: { lng: string};
 }>) {
   
   return (
