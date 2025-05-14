@@ -1,7 +1,8 @@
+//middleware.ts
+
 import { NextRequest, NextResponse } from "next/server";
 import acceptLanguage from "accept-language";
 import { fallbackLng, languages, cookieName } from "./app/i18n/settings";
-// import { isAuthenticated } from "@/shared/helpers"; // Import your authentication helper
 
 acceptLanguage.languages(languages);
 
@@ -21,18 +22,6 @@ export async function middleware(req: NextRequest) {
 
   // Skip the middleware for the /public/static path
   if (req.nextUrl.pathname.startsWith("/public/uploads")) {
-    return NextResponse.next();
-  }
-
-  if (req.nextUrl.pathname.startsWith("/admin")) {
-    if (req.nextUrl.pathname === "/admin/login") {
-      return NextResponse.next();
-    }
-
-    // if (!isAuthenticated(req)) {
-    //   return NextResponse.redirect(new URL("/admin/login", req.url));
-    // }
-    // If authenticated, allow access to admin routes
     return NextResponse.next();
   }
 
