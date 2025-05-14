@@ -18,12 +18,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  params: { lng },
+  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { lng: string};
+  params: { lng: string };
 }>) {
-  
+  const { lng } = params;
   return (
     <html lang={lng} dir={dir(lng)}>
       <body className={`${raleway.variable} antialiased`}>
