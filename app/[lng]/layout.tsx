@@ -20,11 +20,10 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
   params,
-}: Readonly<
-  {
+}: {
     children: React.ReactNode;
-  } & PageProps
->) {
+    params: PageProps["params"]
+  }) {
   const { lng } = params;
   return (
     <html lang={lng} dir={dir(lng)}>
