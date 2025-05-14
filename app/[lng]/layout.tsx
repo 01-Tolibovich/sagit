@@ -4,12 +4,14 @@ import { Raleway } from "next/font/google";
 import "../globals.css";
 import { MainInfo } from "@/components/MainInfo";
 import { Header } from "@/components/Header";
+import { initTranslations } from "../i18n";
+import { navigations } from "@/shared/static/menuNavigations";
 
 const raleway = Raleway({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-raleway-sans",
-  subsets: ["latin", "latin-ext", "cyrillic", "cyrillic-ext", "vietnamese"]
-})
+  subsets: ["latin", "latin-ext", "cyrillic", "cyrillic-ext", "vietnamese"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,20 +24,19 @@ type PageLanguageParams = {
   };
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  params: {lng}
+  params: { lng },
 }: Readonly<{
   children: React.ReactNode;
   params: PageLanguageParams["params"];
 }>) {
+  const { t } = await initTranslations(lng);
   return (
     <html lang={lng} dir={dir(lng)}>
-      <body
-        className={`${raleway.variable} antialiased`}
-      >
-      <Header className=""/>
-        <MainInfo />
+      <body className={`${raleway.variable} antialiased`}>
+        <Header data={navigations(t)} />
+        <MainInfo t={t} />
         {children}
       </body>
     </html>

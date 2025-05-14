@@ -1,12 +1,27 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
 
-export const MainInfo = () => {
+export const MainInfo = ({ t }: { t: (key: string) => string }) => {
   const info = [
-    "3D дизайн и расчёт за 1 день",
-    "Срок изготовления 10дн",
-    "Гарантия 3 года",
+    t("3d_design_one_day"),
+    t("production_time_10d"),
+    t("warranty_3_years_short"),
   ];
+
+  const bramfTitle = (title: string) => {
+    return (
+      <h1 className="flex flex-wrap gap-x-3 text-[clamp(24px,_3vw,_42px)] font-bold text-white text-center md:text-left">
+        {title.split(" ").map((letter, index) => (
+          <span
+            key={index}
+            className={`block ${letter === "BRAMF" ? "text-primary" : ""}`}
+          >
+            {letter}
+          </span>
+        ))}
+      </h1>
+    );
+  };
   return (
     <main className="relative h-[700px] overflow-hidden">
       <Image
@@ -18,10 +33,7 @@ export const MainInfo = () => {
       />
       <div className="container flex items-center h-full relative">
         <div className="md:max-w-[80%] items-center md:items-start flex flex-col gap-6">
-          <h1 className=" text-[clamp(24px,_3vw,_42px)] font-bold text-white text-center md:text-left">
-            Кухни <span className="text-primary">BRAMF</span> – безупречный
-            дизайн и высочайшее качество для вашего дома
-          </h1>
+          {bramfTitle(t("bramf_kitchens"))}
           <div className="flex gap-6 font-bold flex-wrap justify-center md:justify-start">
             {info.map((el) => (
               <p
@@ -33,7 +45,7 @@ export const MainInfo = () => {
             ))}
           </div>
           <Button className="w-fit md:text-2xl font-bold mt-6 px-4 py-2 md:px-8 md:py-4 block h-auto text-base">
-            ОСТАВИТЬ ЗАЯВКУ
+            {t("leave_request")}
           </Button>
         </div>
       </div>

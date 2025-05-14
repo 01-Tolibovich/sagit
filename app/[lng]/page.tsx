@@ -5,28 +5,31 @@ import {
   BoxIcon,
 } from "@/components/svgIcons";
 import Image from "next/image";
+import { initTranslations } from "../i18n";
 
-export default function Home() {
+export default async function Home({ params }: { params: { lng: string } }) {
+  const { lng } = params;
+  const { t } = await initTranslations(lng);
   const items = [
     {
       icon: <EuropeStars />,
-      text: "Европейское качество",
-      desc: "Мы используем только высококачественные материалы от ведущих европейских производителей, таких как EGGER, Häfele, Vurösink, Vuröstone",
+      text: t("european_quality"),
+      desc: t("high_quality_materials"),
     },
     {
       icon: <FlashIcon />,
-      text: "Быстрые сроки",
-      desc: "Благодаря технологии изготовления, автоматизации и выстроенным процессам срок каждого заказа от оплаты и до отгрузки занимает от 5 дней",
+      text: t("fast_deadlines"),
+      desc: t("production_speed"),
     },
     {
       icon: <BoxIcon />,
-      text: "Доставка",
-      desc: "Кратчайшие сроки доставки по всему Казахстану в течении 5-10 дней",
+      text: t("delivery"),
+      desc: t("delivery_times_tj"),
     },
     {
       icon: <SecurityIcon />,
-      text: "Гарантия",
-      desc: "Гарантия 3 года на всю фурнитуру",
+      text: t("warranty"),
+      desc: t("warranty_3_years"),
     },
   ];
 
@@ -46,17 +49,16 @@ export default function Home() {
       <section className="bg-secondary-foreground py-20">
         <div className="container grid lg:grid-cols-2">
           <div className="text-popover">
-            <h2 className="text-primary text-lg md:text-[22px] font-bold">
-              \\ КОРОТКО О НАС
+            <h2 className="text-primary text-lg md:text-[22px] font-bold uppercase">
+              \\ {t("about_us")}
             </h2>
 
             <h3 className=" text-[22px] md:text-[26px]">
-              Дизайн и надежность — главные принципы продуктов{" "}
+              {t("design_reliability")}{" "}
               <span className="text-primary">BRAMF</span>
             </h3>
             <p className="text-sm md:text-lg">
-              Каждый элемент создан, чтобы сделать интерьеры более комфортными,
-              стильными, эффективными и безопасными.
+             {t("product_purpose")}
             </p>
             <div className="grid lg:grid-cols-2 gap-8 mt-8">
               {items.map((el) => (

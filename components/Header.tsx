@@ -1,34 +1,20 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { BramfLogo } from "./svgIcons/BramfLogo";
 
 interface HeaderProps {
   className?: string;
+  data: {
+    text: string;
+    link: string;
+  }[]
 }
-export const Header: React.FC<HeaderProps> = ({ className }) => {
+export const Header: React.FC<HeaderProps> = ({ className, data }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigations = [
-    {
-      text: "О нас",
-      link: "#",
-    },
-    {
-      text: "Подобрать кухню",
-      link: "#",
-    },
-    {
-      text: "Получить дизайн",
-      link: "#",
-    },
-    {
-      text: "Обновления",
-      link: "#",
-    },
-  ];
 
   return (
     <header
@@ -36,17 +22,18 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
     >
       <div className="container grid grid-cols-3 md:grid-cols-[auto_1fr] justify-between items-center">
         <div className="col-start-1 col-end-3 md:col-start-1 md:col-end-2">
-          <Image src="/logos/bramf.svg" width={90} height={12} alt="logo" />
+          <BramfLogo />
         </div>
         <nav className="md:justify-self-end col-start-1 col-end-4 md:col-start-2 md:col-end-3">
           <ul className="flex flex-col gap-6 md:flex-row py-8 md:py-0 text-center">
-            {navigations.map((nav) => (
+            {data.map((nav) => (
               <li key={Math.random()}>
                 <Link className="text-popover" href={nav.link}>
                   {nav.text}
                 </Link>
               </li>
             ))}
+            
             <LanguageSwitcher />
           </ul>
         </nav>
