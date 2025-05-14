@@ -144,3 +144,10 @@ export type Addresess = {
   })[];
   isArchived: boolean;
 }[];
+
+
+export type PageParams = { lng: string };
+
+export type PageProps = {
+  params: PageParams;
+};

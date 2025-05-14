@@ -6,8 +6,9 @@ import {
 } from "@/components/svgIcons";
 import Image from "next/image";
 import { initTranslations } from "../i18n";
+import { PageProps } from "@/shared/types";
 
-export default async function Home({ params }: { params: { lng: string } }) {
+export default async function Home({ params }: PageProps) {
   const { lng } = params;
   const { t } = await initTranslations(lng);
   const items = [
