@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
+import { initTranslations } from "@/app/i18n";
 
-export const MainInfo = ({ t }: { t: (key: string) => string }) => {
+export const MainInfo = async ({ lng }: { lng: string }) => {
+  const { t } = await initTranslations(lng);
   const info = [
     t("3d_design_one_day"),
     t("production_time_10d"),

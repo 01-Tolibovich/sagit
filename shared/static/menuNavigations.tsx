@@ -1,6 +1,7 @@
+import { CustomTFunction } from "@/app/i18n";
 
 
-export const navigations = (t: (key: string) => string) => {
+export const navigations = (t: CustomTFunction) => {
 
   return [
     {
