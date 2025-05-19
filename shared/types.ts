@@ -146,8 +146,8 @@ export type Addresess = {
 }[];
 
 
-export type PageParams = { lng: string };
+// export type PageParams = { lng: string };
 
-export type PageProps = {
-  params: PageParams;
+export type Params = {
+  params: Promise<{ lng: string }>;
 };

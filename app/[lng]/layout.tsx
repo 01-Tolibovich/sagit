@@ -4,7 +4,6 @@ import { Raleway } from "next/font/google";
 import "../globals.css";
 import { MainInfo } from "@/components/MainInfo";
 import { Header } from "@/components/header/Header";
-// import { PageProps } from "@/shared/types";
 
 const raleway = Raleway({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
