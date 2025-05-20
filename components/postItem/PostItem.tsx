@@ -4,7 +4,7 @@ import { postData } from "./data";
 export const PostItem = ({ t }: { t: (key: string) => string }) => {
 
   return (
-    <figure className="grid md:grid-cols-2 gap-4">
+    <figure className="grid md:grid-cols-2 gap-8">
       {postData(t).map((item, index) => (
         <div key={index} className="mb-6">
           <Image

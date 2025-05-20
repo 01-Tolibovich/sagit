@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { Button } from "./ui/button";
+// import { Button } from "./ui/button";
 import { initTranslations } from "@/app/i18n";
+import Link from "next/link";
 
 export const MainInfo = async ({ lng }: { lng: string }) => {
   const { t } = await initTranslations(lng);
@@ -46,9 +47,9 @@ export const MainInfo = async ({ lng }: { lng: string }) => {
               </p>
             ))}
           </div>
-          <Button className="w-fit md:text-2xl font-bold mt-6 px-4 py-2 md:px-8 md:py-4 block h-auto text-base">
+          <Link href="#apply" className="w-fit md:text-2xl font-bold mt-6 px-4 py-2 md:px-8 md:py-4 block h-auto text-base text-white bg-primary rounded-2xl">
             {t("leave_request")}
-          </Button>
+          </Link>
         </div>
       </div>
     </main>

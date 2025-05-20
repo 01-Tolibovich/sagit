@@ -8,6 +8,7 @@ import Image from "next/image";
 import { initTranslations } from "../i18n";
 import { HeadingH2 } from "@/components/ui/HeadingH2";
 import { PostItem } from "@/components/postItem/PostItem";
+import { FirstApply } from "@/components/firstApply/FirstApply";
 // import { PageProps } from "@/shared/types";
 
 export default async function Home({
@@ -53,7 +54,7 @@ export default async function Home({
   };
   return (
     <>
-      <section className="bg-secondary-foreground py-20">
+      <section className="bg-secondary-foreground pt-20 pb-32">
         <div className="container grid lg:grid-cols-2">
           <div className="text-popover">
             <HeadingH2>{t("about_us")}</HeadingH2>
@@ -94,8 +95,9 @@ export default async function Home({
       </section>
       <section>
         <div className="container">
-            <HeadingH2 className="my-8">{t("new_collection_new_tech")}</HeadingH2>
-            <PostItem t={t} />
+          <FirstApply t={t} />
+          <HeadingH2 className="my-8">{t("new_collection_new_tech")}</HeadingH2>
+          <PostItem t={t} />
         </div>
       </section>
     </>
