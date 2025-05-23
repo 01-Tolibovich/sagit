@@ -32,5 +32,22 @@
   "seamless_durability": "Thanks to minimal seams and ultra-reliable adhesion, the furniture maintains a flawless appearance and remains as strong and attractive as on the day of purchase.",
   "explore_kitchen_solutions": "Explore our kitchen solutions and send a request for consultation or cost estimation",
   "privacy_notice": "*We do not share personal data with third parties and do not send spam",
-  "message_whatsapp": "Message in WhatsApp"
+  "message_whatsapp": "Message in WhatsApp",
+  "why_pur_edges_better": "Why do edges on kitchen furniture with PUR glue last longer and look neater?",
+  "edge_glue_types": "The furniture industry uses adhesives based on EVA (ethylene vinyl acetate), PO (polyolefin), and PUR (polyurethane) for edge bonding. The main difference between them is that EVA and PO are thermoplastic adhesives, while PUR is thermosetting.",
+  "thermoplastic_glue_issue": "Thermoplastic glue softens when heated and hardens when cooled, and this cycle can repeat many times. Accordingly, if steam from a kettle, for example, hits an EVA glue joint, the glue softens (at 70–90°C), the edge peels off the end, and the chipboard absorbs a burst of moisture and swells.",
+  "water_resistance": "Water resistance",
+  "heat_resistance": "Heat resistance",
+  "bond_strength": "Bond strength",
+  "seam_aesthetics": "Seam aesthetics",
+  "pur_glue": "PUR glue",
+  "absolute_waterproof": "Absolute (waterproof)",
+  "heat_tolerance_150": "Up to +150°C (does not deform)",
+  "very_high": "Very high",
+  "thin_invisible": "Thin and invisible",
+  "eva_glue": "EVA glue",
+  "limited": "Limited",
+  "heat_tolerance_90": "Up to +90°C (deforms)",
+  "medium": "Medium",
+  "more_visible": "More visible"
 }

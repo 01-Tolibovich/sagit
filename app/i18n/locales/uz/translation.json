@@ -32,5 +32,22 @@
   "seamless_durability": "Minimal choklar va nihoyatda ishonchli yopishuv tufayli, mebel beg‘ubor ko‘rinishini saqlab qoladi va xarid qilingan kundagidek mustahkam va jozibali bo‘lib qoladi.",
   "explore_kitchen_solutions": "Oshxona yechimlarimizni o‘rganing va maslahat yoki narx hisob-kitobi uchun so‘rov yuboring",
   "privacy_notice": "*Biz shaxsiy ma’lumotlarni uchinchi shaxslarga bermaymiz va spam yubormaymiz",
-  "message_whatsapp": "WhatsApp’da xabar"
+  "message_whatsapp": "WhatsApp’da xabar",
+  "why_pur_edges_better": "Nega PUR elimli oshxona mebellaridagi qirralar uzoqroq xizmat qiladi va silliqroq ko‘rinadi?",
+  "edge_glue_types": "Mebel sanoatida qirralarni yopishtirish uchun EVA (etilen-vinil-atsetat), PO (poliolefin) va PUR (polyuretan) asosidagi elimlar qo‘llaniladi. Ularning asosiy farqi shundaki, EVA va PO termoplastik elimlar bo‘lsa, PUR — termoset elimdir.",
+  "thermoplastic_glue_issue": "Termoplastik elim qizitilganda yumshaydi, soviganda esa qattiqlashadi — bu jarayon bir necha bor takrorlanishi mumkin. Masalan, agar choynakning bug‘i EVA elim chokiga tegsa, elim 70–90°C da yumshaydi, qirra qirqilgan joydan ajralib chiqadi va DSP birdaniga namni shimib, shishib ketadi.",
+  "water_resistance": "Suvga chidamlilik",
+  "heat_resistance": "Issiqlikka chidamlilik",
+  "bond_strength": "Yopishish mustahkamligi",
+  "seam_aesthetics": "Choklarning estetikasi",
+  "pur_glue": "PUR elim",
+  "absolute_waterproof": "Mutlaq (suvdan qo‘rqmaydi)",
+  "heat_tolerance_150": "+150°C gacha (deformatsiyalanmaydi)",
+  "very_high": "Juda yuqori",
+  "thin_invisible": "Yupqa va sezilmas",
+  "eva_glue": "EVA elim",
+  "limited": "Cheklangan",
+  "heat_tolerance_90": "+90°C gacha (deformatsiyalanadi)",
+  "medium": "O‘rta",
+  "more_visible": "Ko‘proq ko‘zga tashlanadigan"
 }

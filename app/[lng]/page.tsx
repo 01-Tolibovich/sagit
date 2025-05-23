@@ -52,6 +52,17 @@ export default async function Home({
       </h4>
     );
   };
+
+  const details = [t("edge_glue_types"), t("thermoplastic_glue_issue")];
+
+  const kromlaTabble = [
+    ["", t("pur_glue"), t("eva_glue"), ],
+    [t("water_resistance"), t("absolute_waterproof"), t("limited"), ],
+    [ t("heat_resistance"), t("heat_tolerance_150"), t("heat_tolerance_90")],
+    [ t("bond_strength"), t("very_high"), t("medium")],
+    [t("seam_aesthetics"), t("thin_invisible"), t("more_visible"),]
+  ];
+
   return (
     <>
       <section className="bg-secondary-foreground pt-20 pb-32">
@@ -93,11 +104,41 @@ export default async function Home({
           </div>
         </div>
       </section>
-      <section>
-        <div className="container">
+      <section className="container">
+        <div className="mb-14 md:mb-24">
           <FirstApply t={t} />
           <HeadingH2 className="my-8">{t("new_collection_new_tech")}</HeadingH2>
           <PostItem t={t} />
+        </div>
+        <div className="grid md:grid-cols-[1fr_auto] gap-10 mb-14 md:mb-24">
+          <HeadingH2 className="mb-6 md:col-span-2">
+            {t("why_pur_edges_better")}
+          </HeadingH2>
+          <div>
+            {details.map((detail, index) => (
+              <p key={index} className="my-4 text-sm md:text-lg">
+                {detail}
+              </p>
+            ))}
+          </div>
+          <div className="rounded-tl-4xl rounded-br-4xl bg-primary transform -translate-y-4 -translate-x-4 md:size-64 mx-auto">
+            <Image
+              src="/static/kromka.png"
+              className="w-full rounded-tl-4xl rounded-br-4xl transform translate-y-4 translate-x-4 object-contain"
+              width={300}
+              height={300}
+              alt=""
+            />
+          </div>
+        </div>
+        <div className="mb-14 md:mb-24 overflow-auto pb-2">
+          {kromlaTabble.map((col, i) => (
+            <div key={i} className="grid grid-cols-3 border border-dashed w-4xl mx-auto">
+              {col.map((row, j) => (
+                <span key={j} className={`block px-4 py-2 ${j === 0 ? "font-bold" : ""} ${i === 0 ? "text-primary font-bold text-xl" : ""}`}>{row}</span>
+              ))}
+            </div>
+          ))}
         </div>
       </section>
     </>
