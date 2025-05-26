@@ -56,12 +56,23 @@ export default async function Home({
   const details = [t("edge_glue_types"), t("thermoplastic_glue_issue")];
 
   const kromlaTabble = [
-    ["", t("pur_glue"), t("eva_glue"), ],
-    [t("water_resistance"), t("absolute_waterproof"), t("limited"), ],
-    [ t("heat_resistance"), t("heat_tolerance_150"), t("heat_tolerance_90")],
-    [ t("bond_strength"), t("very_high"), t("medium")],
-    [t("seam_aesthetics"), t("thin_invisible"), t("more_visible"),]
+    ["", t("pur_glue"), t("eva_glue")],
+    [t("water_resistance"), t("absolute_waterproof"), t("limited")],
+    [t("heat_resistance"), t("heat_tolerance_150"), t("heat_tolerance_90")],
+    [t("bond_strength"), t("very_high"), t("medium")],
+    [t("seam_aesthetics"), t("thin_invisible"), t("more_visible")],
   ];
+
+  const GolaHandles = () => {
+    return (
+      <section className=" mb-14 md:mb-24 bg-secondary-foreground pt-20 pb-32">
+        <div className="container">
+          <HeadingH2>{t("gola_handles")}</HeadingH2>
+          <p className="text-popover">{t("gola_description")}</p>
+        </div>
+      </section>
+    );
+  };
 
   return (
     <>
@@ -133,14 +144,25 @@ export default async function Home({
         </div>
         <div className="mb-14 md:mb-24 overflow-auto pb-2">
           {kromlaTabble.map((col, i) => (
-            <div key={i} className="grid grid-cols-3 border border-dashed w-4xl mx-auto">
+            <div
+              key={i}
+              className="grid grid-cols-3 border border-dashed w-4xl mx-auto"
+            >
               {col.map((row, j) => (
-                <span key={j} className={`block px-4 py-2 ${j === 0 ? "font-bold" : ""} ${i === 0 ? "text-primary font-bold text-xl" : ""}`}>{row}</span>
+                <span
+                  key={j}
+                  className={`block px-4 py-2 ${j === 0 ? "font-bold" : ""} ${
+                    i === 0 ? "text-primary font-bold text-xl" : ""
+                  }`}
+                >
+                  {row}
+                </span>
               ))}
             </div>
           ))}
         </div>
       </section>
+      <GolaHandles />
     </>
   );
 }
