@@ -9,6 +9,7 @@ import { initTranslations } from "../i18n";
 import { HeadingH2 } from "@/components/ui/HeadingH2";
 import { PostItem } from "@/components/postItem/PostItem";
 import { FirstApply } from "@/components/firstApply/FirstApply";
+// import { FurnitureForm } from "@/components/furnitureForm/FurnitureForm";
 // import { PageProps } from "@/shared/types";
 
 export default async function Home({
@@ -64,11 +65,73 @@ export default async function Home({
   ];
 
   const GolaHandles = () => {
+    const golaAdvantages = [
+      {
+        title: t("minimalist_aesthetics"),
+        paragraph: t("no_traditional_handles"),
+      },
+      {
+        title: t("ease_of_use"),
+        paragraph: t("smart_opening_system"),
+      },
+      {
+        title: t("safety"),
+        paragraph: t("no_protruding_parts"),
+      },
+      {
+        title: t("durable_materials"),
+        paragraph: t("gola_profiles_durability"),
+      },
+      {
+        title: t("versatility"),
+        paragraph: t("gola_color_options"),
+      },
+    ];
+
     return (
-      <section className=" mb-14 md:mb-24 bg-secondary-foreground pt-20 pb-32">
-        <div className="container">
-          <HeadingH2>{t("gola_handles")}</HeadingH2>
-          <p className="text-popover">{t("gola_description")}</p>
+      <section className="bg-secondary-foreground py-8 md:py-20">
+        <div className="container grid md:grid-cols-2 gap-12 text-popover justify-items-center">
+          <div>
+            <HeadingH2>{t("gola_handles")}</HeadingH2>
+            <p className="">{t("gola_description")}</p>
+          </div>
+          <div className="transform -translate-y-1.5 translate-x-1.5 w-[96%]">
+            <div className="bg-primary transform translate-y-3 -translate-x-3 rounded-br-2xl rounded-tl-2xl">
+              <Image
+                className="transform -translate-y-3 translate-x-3"
+                src="/static/gola1-2.png"
+                width={700}
+                height={300}
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="transform -translate-y-1.5 -translate-x-1.5 w-[96%] row-start-4 row-end-5 md:row-start-2 md:row-end-3">
+            <div className="bg-primary transform translate-y-3 translate-x-3 rounded-br-2xl">
+              <Image
+                className="transform -translate-y-3 -translate-x-3"
+                src="/static/gola3.png"
+                width={700}
+                height={1200}
+                alt=""
+              />
+            </div>
+          </div>
+          <div>
+            {golaAdvantages.map((gola, index) => (
+              <div
+                key={index}
+                className={` py-3 ${
+                  golaAdvantages.length !== ++index ? "border-b" : ""
+                }`}
+              >
+                <h3 className="text-base font-bold mb-2 md:text-2xl">
+                  {gola.title}
+                </h3>
+                <p className="text-sm md:text-lg">{gola.paragraph}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     );
@@ -163,6 +226,7 @@ export default async function Home({
         </div>
       </section>
       <GolaHandles />
+      {/* <FurnitureForm t={t}/> */}
     </>
   );
 }
