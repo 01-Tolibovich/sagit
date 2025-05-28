@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+// import { useState } from "react";
 
 export const ProgressBar = () => {
-  const [progress, setProgress] = useState(0);
+  // const [progress, setProgress] = useState(0);
 
   return (
     <div className="w-full rounded-full p-0">
