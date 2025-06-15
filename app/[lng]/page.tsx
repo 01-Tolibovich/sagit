@@ -9,7 +9,7 @@ import { initTranslations } from "../i18n";
 import { HeadingH2 } from "@/components/ui/HeadingH2";
 import { PostItem } from "@/components/postItem/PostItem";
 import { FirstApply } from "@/components/firstApply/FirstApply";
-// import { FurnitureForm } from "@/components/furnitureForm/FurnitureForm";
+import { FurnitureForm } from "@/components/furnitureForm/FurnitureForm";
 // import { PageProps } from "@/shared/types";
 
 export default async function Home({
@@ -226,7 +226,7 @@ export default async function Home({
         </div>
       </section>
       <GolaHandles />
-      {/* <FurnitureForm t={t}/> */}
+      <FurnitureForm t={t}/>
     </>
   );
 }

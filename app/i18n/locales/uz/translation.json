@@ -61,5 +61,16 @@
   "durable_materials": "Mustahkam va uzoq xizmat qiladigan materiallar",
   "gola_profiles_durability": "Gola profillari eskirish va namlikka chidamli bo‘lib, tizimning uzoq muddatli mustahkamligini ta’minlaydi.",
   "versatility": "Universallik",
-  "gola_color_options": "Turli rang va pardozlarda mavjud bo‘lgan Gola tutqichlari istalgan oshxona loyihasiga osonlikcha mos keladi."
+  "gola_color_options": "Turli rang va pardozlarda mavjud bo‘lgan Gola tutqichlari istalgan oshxona loyihasiga osonlikcha mos keladi.",
+  "done": "Tayyor",
+  "survey_offer": "Qisqa so‘rovnomani to‘ldiring va oshxonangiz uchun chegirma hamda bepul 3D loyihani oling",
+  "choose_kitchen_shape": "Oshxona shaklini tanlang",
+  "straight": "To‘g‘ri",
+  "l_shaped": "G-shaklidagi",
+  "u_shaped": "U-shaklidagi",
+  "kitchen_length_question": "Sizga oshxona garniturining taxminan qanday uzunligi kerak?",
+  "choose_countertop_material": "Stol usti materialini tanlang",
+  "wooden": "Yog‘ochdan",
+  "quartz": "Kvarts",
+  "choose_countertop_color": "Stol usti rangini tanlang"
 }

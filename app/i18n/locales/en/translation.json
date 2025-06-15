@@ -61,5 +61,16 @@
   "durable_materials": "Durable and long-lasting materials",
   "gola_profiles_durability": "Gola profiles are resistant to wear and moisture, ensuring the system's long-term durability.",
   "versatility": "Versatility",
-  "gola_color_options": "Available in various colors and finishes, Gola handles easily integrate into any kitchen project."
+  "gola_color_options": "Available in various colors and finishes, Gola handles easily integrate into any kitchen project.",
+  "done": "Done",
+  "survey_offer": "Take a short survey and get a discount on your kitchen and a free 3D design",
+  "choose_kitchen_shape": "Choose the kitchen shape",
+  "straight": "Straight",
+  "l_shaped": "L-shaped",
+  "u_shaped": "U-shaped",
+  "kitchen_length_question": "What approximate length of kitchen set do you need?",
+  "choose_countertop_material": "Choose the countertop material",
+  "wooden": "Wooden",
+  "quartz": "Quartz",
+  "choose_countertop_color": "Choose the countertop color"
 }
