@@ -151,3 +151,30 @@ export type Addresess = {
 export type Params = {
   params: Promise<{ lng: string }>;
 };
+
+export interface ProgressBarProps {
+  formData: {
+    progress: string;
+    deck: string;
+    tabs?: {
+      title: string;
+      normalLenght?: number | undefined;
+      minLenght?: number  | undefined;
+      maxLenght?: number  | undefined;
+      m?: string | undefined
+      input?: string  | undefined;
+      nameInput?: string | undefined;
+      phoneInput?: string | undefined;
+      submitBtn?: string | undefined;
+      dataProcessingNotice?: string | undefined;
+      id?: number | undefined;
+      types?: {
+        img: string;
+        p: string;
+        id?: number | undefined;
+      }[] | undefined;
+    }[];
+    backBtn: string;
+    nextBtn: string;
+  };
+}

@@ -72,5 +72,19 @@
   "choose_countertop_material": "Choose the countertop material",
   "wooden": "Wooden",
   "quartz": "Quartz",
-  "choose_countertop_color": "Choose the countertop color"
+  "choose_countertop_color": "Choose the countertop color",
+  "oak": "Oak",
+  "light_marble": "Light marble",
+  "dark_granite": "Dark granite",
+  "white_granite": "White granite",
+  "enter_delivery_city": "Enter the delivery city",
+  "enter": "Enter",
+  "fill_form_contact": "Fill out the form and we will contact you shortly",
+  "your_name": "Your name",
+  "phone": "Phone",
+  "submit": "Submit",
+  "data_processing_notice": "Entered data is processed in accordance with the strict privacy policy",
+  "back": "Back",
+  "next": "Next",
+  "m": "m"
 }

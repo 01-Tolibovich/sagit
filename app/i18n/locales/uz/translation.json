@@ -72,5 +72,19 @@
   "choose_countertop_material": "Stol usti materialini tanlang",
   "wooden": "Yog‘ochdan",
   "quartz": "Kvarts",
-  "choose_countertop_color": "Stol usti rangini tanlang"
+  "choose_countertop_color": "Stol usti rangini tanlang",
+  "oak": "Eman",
+  "light_marble": "Yorug‘ marmar",
+  "dark_granite": "Tungi granit",
+  "white_granite": "Oq granit",
+  "enter_delivery_city": "Yetkazib beriladigan shaharni kiriting",
+  "enter": "Kiriting",
+  "fill_form_contact": "Formani to‘ldiring va biz siz bilan tez orada bog‘lanamiz",
+  "your_name": "Ismingiz",
+  "phone": "Telefon",
+  "submit": "Yuborish",
+  "data_processing_notice": "Kiritilgan ma'lumotlar qat'iy maxfiylik siyosatiga muvofiq qayta ishlanadi",
+  "back": "Orqaga",
+  "next": "Keyingi",
+  "m": "m"
 }
