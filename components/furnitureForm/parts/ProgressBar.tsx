@@ -1,16 +1,22 @@
 "use client";
 
-import { ProgressBarProps } from "@/shared/types";
-import { useState } from "react";
+import { InteractiveTabSteps } from "@/shared/types";
+// import { useState } from "react";
 
-export const ProgressBar: React.FC<ProgressBarProps> = ({ formData }) => {
-  const [progress] = useState(17);
+interface ProgressBarProps {
+  formData: InteractiveTabSteps["formData"];
+  process: {
+    steps: number;
+    currentStep: number
+  }
+}
 
-  console.log(formData);
+export const ProgressBar: React.FC<ProgressBarProps> = ({ formData, process }) => {
+  const progress = (process.currentStep / process.steps) * 100;
 
   return (
     <div className="w-full rounded-full p-0">
-      <p>{formData.progress} {progress}%</p>
+      <p>{formData.progress} {Math.floor(progress)}%</p>
       <div
         style={{
           background:

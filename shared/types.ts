@@ -145,34 +145,41 @@ export type Addresess = {
   isArchived: boolean;
 }[];
 
-
 // export type PageParams = { lng: string };
 
 export type Params = {
   params: Promise<{ lng: string }>;
 };
 
-export interface ProgressBarProps {
+export type Variants =
+  | {
+      types?:
+        | {
+            img: string;
+            p: string;
+            id?: number | undefined;
+          }[]
+        | undefined;
+    }[]
+  | undefined;
+
+export interface InteractiveTabSteps {
   formData: {
     progress: string;
     deck: string;
     tabs?: {
       title: string;
       normalLenght?: number | undefined;
-      minLenght?: number  | undefined;
-      maxLenght?: number  | undefined;
-      m?: string | undefined
-      input?: string  | undefined;
+      minLenght?: number | undefined;
+      maxLenght?: number | undefined;
+      m?: string | undefined;
+      input?: string | undefined;
       nameInput?: string | undefined;
       phoneInput?: string | undefined;
       submitBtn?: string | undefined;
       dataProcessingNotice?: string | undefined;
       id?: number | undefined;
-      types?: {
-        img: string;
-        p: string;
-        id?: number | undefined;
-      }[] | undefined;
+      variants?: Variants;
     }[];
     backBtn: string;
     nextBtn: string;
