@@ -42,12 +42,12 @@
               {
                 img: "/static/formProgres/wooden.jpg",
                 p: t("wooden"),
-                id: 1, // если в новом массиве вибран этот объект с id 1
+                id: 1,
               },
               {
                 img: "/static/formProgres/quartz.png",
                 p: t("quartz"),
-                id: 2, // если в новом массиве вибран этот объект с id 2
+                id: 2,
               },
             ],
           },
@@ -57,7 +57,7 @@
         title: t("choose_countertop_color"),
         variants: [
           {
-            id: 1, // отфилтровать и оставить этот объект 
+            id: 1,
             types: [
               {
                 img: "/static/formProgres/oak.jpg",
@@ -78,7 +78,7 @@
             ],
           },
           {
-            id: 2, // отфилтровать и оставить этот объект 
+            id: 2,
             types: [
               {
                 img: "/static/formProgres/MarquinaNero.png",

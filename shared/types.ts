@@ -151,7 +151,7 @@ export type Params = {
 
 export type Variants =
   | {
-      find(arg0: (v: unknown) => unknown): unknown;
+      // find(arg0: (v: unknown) => unknown): unknown;
       types?:
         | {
             img: string;
