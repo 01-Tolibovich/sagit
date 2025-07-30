@@ -15,8 +15,6 @@ interface HeaderProps {
 
 export const MainHead: React.FC<HeaderProps> = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  console.log(1111, data);
   
   return (
     <header

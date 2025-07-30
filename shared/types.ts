@@ -145,14 +145,13 @@ export type Addresess = {
   isArchived: boolean;
 }[];
 
-// export type PageParams = { lng: string };
-
 export type Params = {
   params: Promise<{ lng: string }>;
 };
 
 export type Variants =
   | {
+      find(arg0: (v: unknown) => unknown): unknown;
       types?:
         | {
             img: string;

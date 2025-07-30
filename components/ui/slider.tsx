@@ -23,9 +23,6 @@ function Slider({
     [value, defaultValue, min, max]
   )
 
-  console.log(2222, value);
-  
-
   return (
     <SliderPrimitive.Root
       data-slot="slider"
