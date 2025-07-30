@@ -37,6 +37,7 @@ export const POST = async (req: Request) => {
       `
     })
   } catch (error) {
+    console.error(error);
     
   }
 };
