@@ -10,6 +10,7 @@ import { HeadingH2 } from "@/components/ui/HeadingH2";
 import { PostItem } from "@/components/postItem/PostItem";
 import { FirstApply } from "@/components/firstApply/FirstApply";
 import { FurnitureForm } from "@/components/furnitureForm/FurnitureForm";
+import Quiz from "@/components/quiz/Quiz";
 // import { PageProps } from "@/shared/types";
 
 export default async function Home({
@@ -149,8 +150,8 @@ export default async function Home({
             </h3>
             <p className="text-sm md:text-lg">{t("product_purpose")}</p>
             <div className="grid lg:grid-cols-2 gap-8 mt-8">
-              {items.map((el) => (
-                <div key={Math.random()}>
+              {items.map((el, index) => (
+                <div key={index}>
                   <div className="flex items-center gap-4 border-b border-border py-3 mb-3">
                     <span className="w-12 h-12 block">{el.icon}</span>
                     {renderText(el.text)}
@@ -226,7 +227,8 @@ export default async function Home({
         </div>
       </section>
       <GolaHandles />
-      <FurnitureForm t={t}/>
+      {/* <FurnitureForm t={t} /> */}
+      <Quiz />
     </>
   );
 }

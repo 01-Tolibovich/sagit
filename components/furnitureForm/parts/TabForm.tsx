@@ -25,6 +25,8 @@ export const TabForm: FC<TabFormProps> = ({ formData, step, setTabs }) => {
     max: 10,
   });
 
+  console.log(1111, formData);
+
   const handlePrevStep = () => {
     setTabs((prevState) => ({
       ...prevState,
@@ -69,8 +71,8 @@ export const TabForm: FC<TabFormProps> = ({ formData, step, setTabs }) => {
     });
 
     setTimeout(() => {
-      handleNextStep()
-    }, 500)
+      handleNextStep();
+    }, 500);
   };
 
   const choosed = choosedVariants.map((el) => el.type.p);
@@ -92,7 +94,9 @@ export const TabForm: FC<TabFormProps> = ({ formData, step, setTabs }) => {
                   >
                     <Image
                       className={`w-full h-full max-h-40 min-h-40 object-cover object-center rounded-2xl hover:border-2 hover:border-primary ${
-                        choosed.includes(type.p) ? "border-2 border-primary" : ""
+                        choosed.includes(type.p)
+                          ? "border-2 border-primary"
+                          : ""
                       }`}
                       src={type.img}
                       width={600}
@@ -106,7 +110,7 @@ export const TabForm: FC<TabFormProps> = ({ formData, step, setTabs }) => {
                     )}
                     <figcaption className="text-center">{type.p}</figcaption>
                   </figure>
-                ))
+                )),
               )}
             </div>
           )}
