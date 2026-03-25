@@ -9,7 +9,6 @@ import { initTranslations } from "../i18n";
 import { HeadingH2 } from "@/components/ui/HeadingH2";
 import { PostItem } from "@/components/postItem/PostItem";
 import { FirstApply } from "@/components/firstApply/FirstApply";
-import { FurnitureForm } from "@/components/furnitureForm/FurnitureForm";
 import Quiz from "@/components/quiz/Quiz";
 // import { PageProps } from "@/shared/types";
 
